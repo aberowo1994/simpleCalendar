@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+*,
+*::before,
+*::after {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif", serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #555;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+.calendar__container {
+  height: auto;
+  background-color: #060711;
+  width: 250px;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.year__nav--con {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.year__nav--con .year {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.year .year__value {
+  font-weight: 900;
+  font-size: 14px;
+}
+.nav__con span {
+  margin-right: 10px;
+  color: #4bff79;
+}
+.days__container {
+  width: 100%;
+  height: auto;
+}
+
+.days {
+  width: 100%;
+  text-transform: capitalize;
+  color: #cecece;
+  line-height: 40px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.days:has(span) span {
+  font-size: 13px;
+  color: #b2b2b2;
+  letter-spacing: 1px;
+}
+.days__num {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+  gap: 0.2rem;
+  font-size: 13px;
+}
+.days__num span {
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  transition: background-color 400ms linear;
+  border-radius: 50px;
+}
+.days__num:has(span) span:hover {
+  background-color: #4bff79;
+  color: #000;
+  font-weight: 900;
+  border-radius: 50px;
+}
